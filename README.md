@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ### Step 5: Download the Dataset
 The dataset is not included in the repo. To download the dataset:
 1. Go to the [YouTube Faces with Facial Keypoints](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints) dataset page.
-2. Download the dataset and place the content of it in the `dataset/` folder.
+2. Download the dataset, extract its contents, and place them in the `dataset/` folder.
 3. Ensure that the dataset folder is structured correctly for the project to access.
 
 
