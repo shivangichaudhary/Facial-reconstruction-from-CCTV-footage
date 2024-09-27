@@ -11,9 +11,9 @@
 
 ```plaintext
 Facial-reconstruction-from-CCTV-footage/
-├── assets/
-├── models/
-├── output/
+├── 🟫 assets/
+├── 🟥 models/
+├── 🟨 output/
 ├── 🟧 .gitignore           
 ├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb   
 ├── 🟩 README.md   
@@ -97,6 +97,6 @@ python -m ipykernel install --user --name=venv
 Now you are ready to run the project. Open the Jupyter Notebook:
 
 ```bash
-jupyter notebook gg.ipynb
+jupyter notebook ethos24_autoencoder_cctv_facial_recon.ipynb
 ```
 Follow the steps in the notebook to execute the project.
