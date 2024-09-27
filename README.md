@@ -11,10 +11,12 @@
 
 ```plaintext
 Facial-reconstruction-from-CCTV-footage/
-│
-├── 🟧 .gitignore             # Files and directories to be ignored by Git
-├── 🟦 gg.ipynb               # Jupyter notebook for the project
-├── 🟩 README.md              # Project documentation
+├── assets/
+├── models/
+├── output/
+├── 🟧 .gitignore           
+├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb   
+├── 🟩 README.md   
 ├── 🟪 requirements.txt       # Python dependencies for the project
 ├── 🔴 venv/                  # Virtual environment directory (ignored by Git)
 └── 🔴 dataset/               # Folder for dataset files (ignored by Git)
