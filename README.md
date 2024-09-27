@@ -3,7 +3,8 @@
 ## Links
 
 [![Dataset](https://img.shields.io/badge/Kaggle-Dataset-1DA1F2?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints)
-[![Whimsical Mindmap](https://img.shields.io/badge/Whimsical-Mindmap-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)
+[![Whimsical](https://img.shields.io/badge/Project-Flow-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)
+[![Project Paper](https://img.shields.io/badge/Tech-Paper-1DA1F2?style=for-the-badge&logo=google&logoColor=white)](https://docs.google.com/document/d/1Y6O3dmGomgiGL6AV6-QGcjhODdklS2AOA7uunwgv7UE/edit?usp=sharing)
 
 
 # Project Structure
