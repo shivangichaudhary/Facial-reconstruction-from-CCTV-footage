@@ -57,7 +57,8 @@ The challenge focuses on building a **facial reconstruction model** capable of e
 - [Preprocessing Steps](#preprocessing-steps)
 - [Model Evaluation and Metrics](#model-evaluation-and-metrics)
 - [Prediction Results](#prediction-results)
-- [Future Work and Enhancements](#future-work-and-enhancements)
+- [Bias distribution and Visualization](#model-bias-and-distribution)
+- [Future Work and Enhancements](#future-works-and-enhancements)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -221,6 +222,21 @@ After training, the reconstructed images are compared against the original image
 <img src="https://raw.githubusercontent.com/shivangichaudhary/Facial-reconstruction-from-CCTV-footage/refs/heads/main/output/George%20Harrison_comparison_3.png" alt="George Harrison Comparison" width="512" height="256">
 
 *(Note: The model is in development phase. so the results may not good. change the param of the model for more accurate prediction or wait for our official release)*
+
+### Model Bias and distribution
+
+| Layer Name    | Bias Values                                           |
+|---------------|------------------------------------------------------|
+| `conv2d`     | [ 0.0597,  0.1302,  0.0454,  0.0412,  0.0985,  0.0651,  0.0463,  0.0315,  0.0454, -0.0308,  0.0516, -0.0126,  0.0475,  0.0242,  0.0539, -0.0247,  0.0575, -0.0478,  0.0324,  0.0006,  0.0553,  0.0124, -0.0346,  0.0524,  0.0466,  0.0030,  0.0362,  0.0580, -0.0038,  0.0374, -0.0373, -0.0488] |
+| `conv2d_1`   | [ 0.0490, -0.0137,  0.0626, -0.0467,  0.0350,  0.0610,  0.0516,  0.0377,  0.0170,  0.0522,  0.0479, -0.0188, -0.0423,  0.0604, -0.0083, -0.0463] |
+| `conv2d_2`   | [-0.0414, -0.0272,  0.0376, -0.0130, -0.0016, -0.0488,  0.0510, -0.0060,  0.0623,  0.0594, -0.0164,  0.0682,  0.0121,  0.1069, -0.0485,  0.0485] |
+| `conv2d_3`   | [ 0.0521,  0.0476,  0.0563, -0.0477, -0.0612,  0.0027, -0.0374,  0.0523,  0.0591,  0.0199,  0.0055,  0.0547,  0.0556, -0.0334, -0.0146, -0.0326, -0.0384, -0.0214,  0.0532, -0.0165, -0.0127,  0.0625, -0.0529,  0.0671, -0.0428, -0.0220,  0.0604,  0.0627, -0.0413,  0.1004, -0.0652, -0.0463] |
+| `conv2d_4`   | [-0.0484, -0.0425, -0.0461]                         |
+
+### Visualizations
+
+![Bias value distribution Hist](https://raw.githubusercontent.com/shivangichaudhary/Facial-reconstruction-from-CCTV-footage/refs/heads/main/assets/autoencoder.bias_dist.png)
+
 
 ---
 
