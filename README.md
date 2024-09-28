@@ -15,7 +15,8 @@ Facial-reconstruction-from-CCTV-footage/
 ├── 🟥 models/
 ├── 🟨 output/
 ├── 🟧 .gitignore           
-├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb   
+├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb
+├── ⬜ LICENSE  
 ├── 🟩 README.md   
 ├── 🟪 requirements.txt       # Python dependencies for the project
 ├── 🔴 venv/                  # Virtual environment directory (ignored by Git)
