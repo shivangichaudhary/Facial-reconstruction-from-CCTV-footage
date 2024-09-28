@@ -2,35 +2,68 @@
 
 ## Links
 
-[![Dataset](https://img.shields.io/badge/Kaggle-Dataset-1DA1F2?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints)
-[![Whimsical](https://img.shields.io/badge/Project%20Flow-Link-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)
+[![Dataset](https://img.shields.io/badge/Kaggle-Dataset-1DA1F2?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints)  
+[![Whimsical](https://img.shields.io/badge/Project%20Flow-Link-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)  
 [![Project Paper](https://img.shields.io/badge/Tech%20Paper-Link-1DA1F2?style=for-the-badge&logo=google&logoColor=white)](https://docs.google.com/document/d/1Y6O3dmGomgiGL6AV6-QGcjhODdklS2AOA7uunwgv7UE/edit?usp=sharing)
 
+## ⚠️ Warnings
+
+### 🚧 Proof of Concept (POC) in Development
+This project is a **Proof of Concept (POC)** and is still in active development. It is **not a fully functional model** and should **not be used for any professional or real-world applications** at this stage. Please use this project solely for **development and educational purposes**.
+
+### ⚠️ Do Not Use for Critical Tasks
+The model is currently under development and its predictions **should not be relied upon for sensitive tasks** such as legal or security-related applications. Future improvements and refinements are planned, but the current state is experimental.
+
+---
 
 # Project Structure
 
 ```plaintext
 Facial-reconstruction-from-CCTV-footage/
-├── 🟫 assets/
-├── 🟥 models/
-├── 🟨 output/
-├── 🟧 .gitignore           
-├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb
+├── 🟫 assets/                 # Assets like images, diagrams
+├── 🟥 models/                 # Saved models during training
+├── 🟨 output/                 # Outputs such as predictions and comparisons
+├── 🟧 .gitignore              
+├── 🟦 ethos24_autoencoder_cctv_facial_recon.ipynb  # Main notebook
 ├── ⬜ LICENSE  
 ├── 🟩 README.md   
-├── 🟪 requirements.txt       # Python dependencies for the project
-├── 🔴 venv/                  # Virtual environment directory (ignored by Git)
-└── 🔴 dataset/               # Folder for dataset files (ignored by Git)
+├── 🟪 requirements.txt        # Python dependencies for the project
+├── 🔴 venv/                   # Virtual environment directory (ignored by Git)
+└── 🔴 dataset/                # Folder for dataset files (ignored by Git)
 ```
 
-
 ## Overview
-This project reconstructs human faces from low-quality CCTV footage using advanced machine learning techniques.
+
+This project aims to reconstruct human faces from low-quality CCTV footage using deep learning techniques, focusing on overcoming challenges such as low resolution, motion blur, noise, and poor lighting conditions.
+
+---
+
+## 📌 Important Note: Made for Ethos 2024 Hackathon
+
+This project was created as part of the **Saptang Labs - Machine Learning Challenge: Ethos 2024** hackathon conducted by the **Indian Institute of Technology (IIT), Guwahati**.
+
+### Problem Statement
+
+The challenge focuses on building a **facial reconstruction model** capable of enhancing low-quality CCTV footage to assist in **identifying suspects** in various scenarios. The key difficulties include handling **motion blur**, **low resolution**, and **poor lighting**, all of which significantly degrade the visual quality of the footage. This project aims to address these issues through techniques such as **noise reduction**, **super-resolution**, and **image enhancement**.
+
+---
+
+## Table of Contents
+
+- [Project Setup Guide](#project-setup-guide)
+- [Model Architecture and Explanation](#model-architecture-and-explanation)
+- [Preprocessing Steps](#preprocessing-steps)
+- [Model Evaluation and Metrics](#model-evaluation-and-metrics)
+- [Prediction Results](#prediction-results)
+- [Future Work and Enhancements](#future-work-and-enhancements)
+- [Acknowledgments](#acknowledgments)
+
+---
 
 ## Project Setup Guide
 
-
 ### Step 1: Clone the Repository
+
 To get started, clone the repository from GitHub. Open your terminal and run the following command:
 
 ```bash
@@ -38,8 +71,8 @@ git clone https://github.com/shivangichaudhary/Facial-reconstruction-from-CCTV-f
 cd Facial-reconstruction-from-CCTV-footage
 ```
 
-
 ### Step 2: Create a Virtual Environment
+
 Set up a Python virtual environment to manage project dependencies:
 
 ```bash
@@ -50,8 +83,8 @@ OR
 python3 -m venv venv
 ```
 
-
 ### Step 3: Activate the Virtual Environment
+
 - **Windows**:
 ```bash
 .\venv\Scripts\activate
@@ -62,24 +95,24 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-
 ### Step 4: Install Dependencies
+
 Install all the necessary Python libraries and dependencies using the `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-
 ### Step 5: Download the Dataset
+
 The dataset is not included in the repo. To download the dataset:
 1. Go to the [YouTube Faces with Facial Keypoints](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints) dataset page.
 2. Download the dataset, extract its contents, and place them in the `dataset/` folder.
 3. Ensure that the dataset folder is structured correctly for the project to access.
 
-
 ### Step 6: Set the Virtual Environment for Jupyter Notebook (Optional)
-If you are using Jupyter Notebook, you'll want to make sure your virtual environment is selected as the kernel:
+
+If you are using Jupyter Notebook, make sure your virtual environment is selected as the kernel:
 
 1. Install ipykernel:
 ```bash
@@ -93,11 +126,97 @@ python -m ipykernel install --user --name=venv
 
 3. In Jupyter Notebook, select the kernel named `venv`.
 
-
 ### Step 7: Run the Project
+
 Now you are ready to run the project. Open the Jupyter Notebook:
 
 ```bash
 jupyter notebook ethos24_autoencoder_cctv_facial_recon.ipynb
 ```
 Follow the steps in the notebook to execute the project.
+
+---
+
+## Model Architecture and Explanation
+
+The project uses a **Convolutional Autoencoder** based on a modified **LeNet-style architecture**. The architecture consists of:
+
+- **Encoder**:
+  - Series of convolution layers with max-pooling to reduce the spatial dimensions while capturing features.
+- **Latent Space**:
+  - The compressed representation that encodes the essential features for face reconstruction.
+- **Decoder**:
+  - Mirrors the encoder to upsample and reconstruct the input image.
+- **Skip Connections**:
+  - Added from the encoder to the decoder to preserve fine details during reconstruction.
+- **Activation Functions**:
+  - `ReLU` for convolution layers and `sigmoid` for the output layer to produce pixel values between 0 and 1.
+
+### Insert Architecture Diagram
+
+You can visualize the autoencoder architecture in the notebook with the diagram included. The **Convolutional Autoencoder** layers with their respective parameters (depth, height, width, filter size) will be illustrated here.
+
+---
+
+## Preprocessing Steps
+
+### **Low-Light Enhancement**
+
+The CCTV footage often suffers from low lighting. To mitigate this:
+
+- **Gamma Correction**: Enhances low-light regions by applying `exposure.adjust_gamma(img, gamma=0.8)` which brightens darker areas while maintaining image contrast.
+
+### **Noise Reduction**
+
+Noise is inherent in low-quality footage. A denoising method is used:
+
+- **Non-local Means Denoising**: Applied using `cv2.fastNlMeansDenoisingColored` to reduce chromatic and luminance noise in the image while preserving detail.
+
+### **Super-Resolution**
+
+While not explicitly super-resolution, the **upsampling layers** in the decoder help increase image size after encoding, enhancing spatial detail:
+
+- **Upsampling2D Layers**: Increases the resolution of the encoded feature maps to reconstruct a higher-quality image.
+
+### **Data Augmentation**
+
+To generalize the model and reduce overfitting, augmentation techniques are applied:
+
+- **Horizontal Flipping**: Randomly flips images horizontally with a 50% probability to simulate different orientations of faces.
+
+---
+
+## Model Evaluation and Metrics
+
+The model's performance is evaluated using the following metrics:
+
+1. **Mean Squared Error (MSE)**: Measures the difference between the original and reconstructed images.
+2. **Peak Signal-to-Noise Ratio (PSNR)**: Calculates the ratio between the maximum possible power of a signal and the power of corrupting noise.
+
+### Insert Metric Tables
+
+Insert tables showing **MSE** and **PSNR** values for the test dataset here.
+
+---
+
+## Prediction Results
+
+After training, the reconstructed images are compared against the original images. Visual comparisons can be found in the `output/` folder.
+
+### Insert Comparison Images
+
+You can include side-by-side comparison images here in the documentation to showcase how well the model reconstructs faces from low-quality footage.
+
+---
+
+## Future Work and Enhancements
+
+1. **Incorporate 3D Landmarks**: The project can be extended to use 3D facial landmarks for better accuracy in facial reconstruction.
+2. **Multi-scale Feature Learning**: Adding multi-scale convolutions to improve fine details at different scales in the image.
+3. **Experiment with Super-Resolution Networks**: Incorporate explicit super-resolution techniques such as SRCNN or ESRGAN to further enhance the quality of face reconstructions from extremely low-resolution images.
+
+---
+
+## Acknowledgments
+
+Special thanks to the dataset contributors and open-source tool developers.
