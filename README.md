@@ -1,10 +1,12 @@
 # Facial Reconstruction from CCTV Footage
 
+
 ## Links
 
-[![Dataset](https://img.shields.io/badge/Kaggle-Dataset-1DA1F2?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints)  
-[![Whimsical](https://img.shields.io/badge/Project%20Flow-Link-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)  
+[![Dataset](https://img.shields.io/badge/Kaggle-Dataset-1DA1F2?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/selfishgene/youtube-faces-with-facial-keypoints)
+[![Whimsical](https://img.shields.io/badge/Project%20Flow-Flow-FB8C00?style=for-the-badge&logo=whimsical&logoColor=white)](https://whimsical.com/ethos-24-iit-guwahati-4EKrywTGGDVYnw8zFqMWsW)
 [![Project Paper](https://img.shields.io/badge/Tech%20Paper-Link-1DA1F2?style=for-the-badge&logo=google&logoColor=white)](https://docs.google.com/document/d/1Y6O3dmGomgiGL6AV6-QGcjhODdklS2AOA7uunwgv7UE/edit?usp=sharing)
+
 
 ## ⚠️ Warnings
 
@@ -152,9 +154,8 @@ The project uses a **Convolutional Autoencoder** based on a modified **LeNet-sty
 - **Activation Functions**:
   - `ReLU` for convolution layers and `sigmoid` for the output layer to produce pixel values between 0 and 1.
 
-### Insert Architecture Diagram
-
-You can visualize the autoencoder architecture in the notebook with the diagram included. The **Convolutional Autoencoder** layers with their respective parameters (depth, height, width, filter size) will be illustrated here.
+### Architecture
+![Autoencoder Architecture](https://raw.githubusercontent.com/shivangichaudhary/Facial-reconstruction-from-CCTV-footage/refs/heads/main/assets/autoencoder_architecture.png)
 
 ---
 
@@ -193,30 +194,64 @@ The model's performance is evaluated using the following metrics:
 1. **Mean Squared Error (MSE)**: Measures the difference between the original and reconstructed images.
 2. **Peak Signal-to-Noise Ratio (PSNR)**: Calculates the ratio between the maximum possible power of a signal and the power of corrupting noise.
 
-### Insert Metric Tables
+### Performance metrics
 
-Insert tables showing **MSE** and **PSNR** values for the test dataset here.
+|  | Metric                         | Value     |
+|--|---------------------------------|-----------|
+| 0 | Mean Squared Error (MSE)        | 0.000480  |
+| 1 | Peak Signal-to-Noise Ratio (PSNR) | 33.188666 |
+
 
 ---
 
 ## Prediction Results
 
 After training, the reconstructed images are compared against the original images. Visual comparisons can be found in the `output/` folder.
+|  | Filename        | Original   | Reconstructed   |
+|--|-----------------|------------|-----------------|
+| 0 | Abdullah Gul    | `[[0.3333333333333333, 0.19607843137254902, 0....` | `[[0.3485127, 0.3368767, 0.2930863], [0.318771...` |
+| 1 | George Harrison | `[[0.4627450980392157, 0.3058823529411765, 0.2...` | `[[0.4017781, 0.39366928, 0.35159398], [0.3649...` |
+| 2 | Fidel Castro    | `[[0.3333333333333333, 0.19607843137254902, 0....` | `[[0.34945077, 0.3377307, 0.2939164], [0.32003...` |
+| 3 | Talisa Soto     | `[[0.28627450980392155, 0.2627450980392157, 0....` | `[[0.3513748, 0.37173614, 0.33502895], [0.3133...` |
+| 4 | Andrew Bernard  | `[[0.2901960784313726, 0.2627450980392157, 0.2...` | `[[0.35628965, 0.37772307, 0.34051785], [0.320...` |
 
-### Insert Comparison Images
+### Comparison Images
 
-You can include side-by-side comparison images here in the documentation to showcase how well the model reconstructs faces from low-quality footage.
+<img src="https://raw.githubusercontent.com/shivangichaudhary/Facial-reconstruction-from-CCTV-footage/refs/heads/main/output/Abdullah%20Gul_comparison_0.png" alt="Abdullah Gul Comparison" width="512" height="256">
+<img src="https://raw.githubusercontent.com/shivangichaudhary/Facial-reconstruction-from-CCTV-footage/refs/heads/main/output/George%20Harrison_comparison_3.png" alt="George Harrison Comparison" width="512" height="256">
+
+*(Note: The model is in development phase. so the results may not good. change the param of the model for more accurate prediction or wait for our official release)*
 
 ---
 
-## Future Work and Enhancements
-
-1. **Incorporate 3D Landmarks**: The project can be extended to use 3D facial landmarks for better accuracy in facial reconstruction.
-2. **Multi-scale Feature Learning**: Adding multi-scale convolutions to improve fine details at different scales in the image.
-3. **Experiment with Super-Resolution Networks**: Incorporate explicit super-resolution techniques such as SRCNN or ESRGAN to further enhance the quality of face reconstructions from extremely low-resolution images.
+## Future Works and Enhancements
+- **Live CCTV Video Processing:** Extend the model to handle real-time CCTV video feeds for on-the-fly facial reconstruction.
+- **Incorporate 3D Landmarks:** Utilize 3D facial landmarks to improve the accuracy and realism of facial reconstruction.
+- **Multi-Scale Feature Learning:** Implement multi-scale convolutions to capture fine details at various scales, enhancing the quality of the reconstructed faces.
+- **Advanced Noise Reduction:** Develop more sophisticated noise reduction techniques to handle noisy input images from low-quality CCTV footage.
+- **Improved Super-Resolution:** Integrate state-of-the-art super-resolution models, such as SRCNN or ESRGAN, to further enhance the quality of reconstructions from extremely low-resolution images.
+- **Robustness to Motion Blur:** Improve the model’s ability to process severely blurred images by developing specific techniques to handle motion blur.
+- **Experiment with Super-Resolution Networks:** Continue exploring advanced super-resolution networks for better face reconstruction results, particularly with extremely low-quality images.
 
 ---
 
 ## Acknowledgments
 
 Special thanks to the dataset contributors and open-source tool developers.
+
+---
+
+## Contact Us
+
+<p>
+    <a href="mailto:sn003chandrakant@gmail.com" style="text-decoration: none; color: #007BFF;">
+        📧 snckkund
+    </a>
+</p>
+
+<p>
+    <a href="mailto:shivangichaudhary1927@gmail.com" style="text-decoration: none; color: #007BFF;">
+        📧 shivangichaudhary
+    </a>
+</p>
+
