@@ -244,14 +244,14 @@ Special thanks to the dataset contributors and open-source tool developers.
 ## Contact Us
 
 <p>
-    <a href="mailto:sn003chandrakant@gmail.com" style="text-decoration: none; color: #007BFF;">
-        📧 snckkund
+    <a href="mailto:shivangichaudhary1927@gmail.com" style="text-decoration: none; color: #007BFF;">
+        📧 shivangichaudhary
     </a>
 </p>
 
 <p>
-    <a href="mailto:shivangichaudhary1927@gmail.com" style="text-decoration: none; color: #007BFF;">
-        📧 shivangichaudhary
+    <a href="mailto:sn003chandrakant@gmail.com" style="text-decoration: none; color: #007BFF;">
+        📧 snckkund
     </a>
 </p>
 
